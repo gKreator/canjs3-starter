@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="icon" href="favicon.ico"/>
+    <title>{{title}}</title>
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100italic,100,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <can-import from="canjs3-starter-client/app" export-as="viewModel" />
+    <can-import from="canjs3-starter-client/components/header/">
+        {{#if isResolved}}
+            <component-header {app_name}="app_name" {page_title}="page_title" {session}="session"></component-header>
+        {{/if}}
+    </can-import>
+    <div class="app-inner">
+        <div class="app-page" data-page="{{page}}">
+            {{#if preloaded}}
+                {{{pageComponent}}}
+            {{/if}}
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+    {{#isProduction}}
+        <script src="dist/steal.production.js"></script>
+    {{else}}
+        <script src="/node_modules/steal/steal.js"></script>
+    {{/isProduction}}
+    </body>
+</html>

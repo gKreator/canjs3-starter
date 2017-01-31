@@ -1,0 +1,89 @@
+{
+  "name": "canjs3-starter-client",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "",
+  "scripts": {
+    "production": "NODE_ENV=production node index",
+    "start": "node index.js",
+    "build": "node build.js",
+    "develop": "node index.js --develop",
+    "install": "node build.js",
+    "test": "rm -rf ~/.mozilla && DEBUG=testee* testee test.html --browsers firefox --reporter Spec"
+  },
+  "main": "canjs3-starter-client/index.stache!done-autorender",
+  "files": [
+    "src"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "can-component": "^3.0.4",
+    "can-connect": "^1.0.19",
+    "can-construct": "^3.0.5",
+    "can-control": "^3.0.5",
+    "can-define": "^1.0.8",
+    "can-define-backup": "0.0.1",
+    "can-define-stream": "0.0.6",
+    "can-event": "^3.0.2",
+    "can-jquery": "^3.0.3",
+    "can-namespace": "^1.0.0",
+    "can-route": "^3.0.6",
+    "can-route-pushstate": "^3.0.1",
+    "can-set": "^1.0.3",
+    "can-stache": "^3.0.16",
+    "can-stache-converters": "^3.0.6",
+    "can-stream": "0.0.5",
+    "can-util": "^3.2.0",
+    "can-view-autorender": "^3.0.3",
+    "can-view-import": "^3.0.4",
+    "can-view-model": "^3.1.3",
+    "can-view-parser": "^3.0.6",
+    "can-view-target": "^3.0.7",
+    "can-zone": "^0.6.2",
+    "es6-shim": "^0.35.2",
+    "simple-dom": "^0.3.2",
+    "steal": "^1.0.0",
+    "steal-platform": "0.0.4",
+    "steal-qunit": "^0.1.1",
+    "steal-stache": "^3.0.0",
+    "steal-tools": "^1.0.0"
+  },
+  "devDependencies": {
+    "can-fixture": "1.0.7",
+    "steal-css": "^1.2.0"
+  },
+  "steal": {
+    "main": "drivetrain/index.stache!done-autorender",
+    "directories": {
+      "lib": "src"
+    },
+    "configDependencies": [
+      "node_modules/can-zone/register"
+    ],
+    "plugins": [
+      "steal-css",
+      "steal-less",
+      "steal-stache"
+    ],
+    "npmIgnore": [
+      "documentjs",
+      "testee",
+      "steal-tools"
+    ],
+    "envs": {
+      "server-development": {
+        "renderingBaseURL": "http://canjs3-starter:5000/",
+        "map": {
+          "sweetalert2": "@empty"
+        }
+      },
+      "server-production": {
+        "renderingBaseURL": "http://canjs3-starter:5000/",
+        "map": {
+          "sweetalert2": "@empty"
+        }
+      }
+    }
+  }
+}
