@@ -1,6 +1,6 @@
 # canjs3-starter
 
-## Not ready
+## Not ready.. but try it... not quite full sentences
 
 ## The simple way to start your next web app.
 
@@ -8,13 +8,25 @@
 
 **CanJS is the easiest and most concise full framework**
 
+> explain how it is a full framework, compare it to react where you have multiple routing libraries
+>
+> easy because it makes sinple sense
+>
+>does not try to over complicate simple concepts
+>
+>show small scale examples via jsbin
+>
+>try to showcase the things the docs don't quite show
+>
+> need to explain the patterns and not just the functions that the docs cover
+
 ***
 
 This example/tutorial will do it's best o teach you the minimal requirements to develop a web app using the canjs/donejs enviorment. Simplifying the packages to suite the average need.
 
 We will cover **CanJS, DoneJS, and StealJS**. This is the TriForce.
 
->> list of keywords/topics
+> list of keywords/topics
 
 ***
 
@@ -41,6 +53,8 @@ To do..
 
 Currently not working and ready in this example. Skip to the **Client** part of the tutorial and check out the **public/** folder.
 
+**create a server that routes to json files, no database**
+
 **ignore just notes**
 
 >install donejs
@@ -54,7 +68,7 @@ Currently not working and ready in this example. Skip to the **Client** part of 
 
 ***
 
-Client
+#### Client
 
 **ignore just notes**
 
@@ -74,9 +88,20 @@ Client
 >
 >can-stache-converters, for easy dom form handling
 
+can-stache-converters and propDefinitions
+http://jsbin.com/zogigubahi/1/edit?html,js,output
+
+http://forums.donejs.com/t/form-viewmodel-sync/543
+
+http://forums.donejs.com/t/canjs-3-what-is-the-best-way-to-execute-a-function-on-a-component/503
+
+http://forums.donejs.com/t/canjs-3-2-1-can-component-inserted-event/491/6
+
+
+
 ***
 
-###Module Loader
+### Module Loader
 
 **StealJS**
 
@@ -96,3 +121,15 @@ https://stealjs.com/docs/steal.html
 ***
 
 To do..
+
+***
+
+**Nginx**
+
+>explain my config
+
+***
+
+To do..
+
+***
