@@ -5,14 +5,12 @@
 import "styles/styles.css!";
 
 import "es6-shim";
-import DefineMap from "can-define/map/map";
+import DefineMap from "can-define/map/";
 import stache from "can-stache";
 import can from "can-namespace";
 import route from 'can-route';
 import "can-route-pushstate";
 import 'can-stache/helpers/route';
-
-window.can = can; // This is just for debugging.
 
 const AppViewModel = DefineMap.extend('App', {
         /**
@@ -33,13 +31,6 @@ const AppViewModel = DefineMap.extend('App', {
          **/
         get title(){
             return this.app_name + ' | ' + this.page_title;
-        },
-        /**
-         * preloaded
-         **/
-        preloaded: {
-            serialize: false,
-            value: false
         },
         /**
          *
@@ -68,17 +59,16 @@ const AppViewModel = DefineMap.extend('App', {
                 return {
                     title: "Dashboard",
                     componentName: "page-dashboard-index",
-                    attributes: "{(init_options)}='./init_options'",
                     moduleName: "dashboard/index/",
-                    padding: false,
                 };
 
             } else {
                 return {
                     title: "Page Not Found",
-                    componentName: "page-error-404",
-                    moduleName: "error/404/",
-                    padding: true,
+                    componentName: "four-0-four",
+                    attributes: "",
+                    moduleName: "404.component!",
+                    statusCode: 404
                 };
             }
         },

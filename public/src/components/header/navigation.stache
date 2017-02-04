@@ -1,0 +1,41 @@
+<div class="navigation-section {{#if navigation_show}} show {{/if}}">
+    <ul class="menu">
+        {{#navigation.data}}
+            <li class="{{#isCurrentRoute .}} active {{/isCurrentRoute}}">
+                {{#if url}}
+                    <a class="title" href="{{createUrl url}}" ($click)="selected()">
+                        {{#is icon.type "fa"}}
+                            <i class="icon fa fa-{{icon.icon}}" aria-hidden="true"></i>
+                        {{/is}}
+                        <span>{{title}}</span>
+                    </a>
+                {{else}}
+                    <div class="title">
+                        {{#is icon.type "fa"}}
+                            <i class="icon fa fa-{{icon.icon}}" aria-hidden="true"></i>
+                        {{/is}}
+                        <span>{{title}}</span>
+                        {{#if children}}
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        {{/if}}
+                    </div>
+                {{/if}}
+                {{#if children}}
+                    <ul class="sub-menu">
+                        {{#children}}
+                            <li class="{{#isCurrentRoute .}} active {{/isCurrentRoute}}">
+                                <a href="{{createUrl url}}" ($click)="selected()">
+                                    {{#is icon.type "fa"}}
+                                        <i class="icon fa fa-{{icon.icon}}" aria-hidden="true"></i>
+                                    {{/is}}
+                                    <span>{{title}}</span>
+                                </a>
+                            </li>
+                        {{/children}}
+                    </ul>
+                {{/if}}
+            </li>
+        {{/navigation.data}}
+    </ul>
+    <div class="clearfix"></div>
+</div>

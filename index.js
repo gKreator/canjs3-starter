@@ -21,9 +21,10 @@ var window = makeWindow({});
 //express
 var app = express();
 
+/*
 //proxy
 app.use('/api', proxy({
-    target: 'http://localhost:86/',
+    target: 'http://localhost:88/',
     proxyTimeout: 5000,
     changeOrigin: true,
     logLevel: 'debug',
@@ -43,6 +44,7 @@ function relayResponseHeaders(proxyRes, req, res) {
         res.append(key, proxyRes.headers[key]);
     });
 }
+*/
 
 //cookie parser
 app.use(cookieParser());

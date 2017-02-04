@@ -4,12 +4,8 @@
   "description": "",
   "homepage": "",
   "scripts": {
-    "production": "NODE_ENV=production node index",
-    "start": "node index.js",
     "build": "node build.js",
-    "develop": "node index.js --develop",
-    "install": "node build.js",
-    "test": "rm -rf ~/.mozilla && DEBUG=testee* testee test.html --browsers firefox --reporter Spec"
+    "install": "node build.js"
   },
   "main": "canjs3-starter-client/index.stache!done-autorender",
   "files": [
@@ -47,14 +43,15 @@
     "steal-platform": "0.0.4",
     "steal-qunit": "^0.1.1",
     "steal-stache": "^3.0.0",
-    "steal-tools": "^1.0.0"
+    "steal-tools": "^1.0.0",
+    "done-autorender": "0.9.0-pre.3"
   },
   "devDependencies": {
     "can-fixture": "1.0.7",
     "steal-css": "^1.2.0"
   },
   "steal": {
-    "main": "drivetrain/index.stache!done-autorender",
+    "main": "canjs3-starter-client/index.stache!done-autorender",
     "directories": {
       "lib": "src"
     },
@@ -67,8 +64,6 @@
       "steal-stache"
     ],
     "npmIgnore": [
-      "documentjs",
-      "testee",
       "steal-tools"
     ],
     "envs": {

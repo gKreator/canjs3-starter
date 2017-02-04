@@ -1,0 +1,26 @@
+server {
+    listen       80;
+    server_name  canjs3-starter.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:81;
+    }
+}
+
+
+server {
+    listen 88 default_server;
+    listen [::]:88 default_server;
+
+    root /usr/share/nginx/canjs3-starter/public;
+    index index.html index.htm index.nginx-debian.html;
+
+    client_max_body_size 256M;
+
+    server_name dev.canjs3-starter;
+
+    location / {
+        try_files $uri $uri/ /index.html?$query_string;
+    }
+
+}

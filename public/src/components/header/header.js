@@ -3,14 +3,6 @@ import DefineMap from "can-define/map/";
 import HeaderTemplate from "./header.stache!";
 
 var HeaderViewModel = DefineMap.extend( "HeaderViewModel", {
-    app_name: {
-        type: 'string',
-        value: null
-    },
-    page_title: {
-        type: '*',
-        value: null
-    },
 });
 
 var HeaderComponent = Component.extend({

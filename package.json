@@ -1,6 +1,13 @@
 {
   "name": "canjs3-starter",
   "version": "0.0.1",
+  "scripts": {
+    "production": "NODE_ENV=production node index",
+    "start": "node index.js",
+    "build": "node public/build.js",
+    "develop": "node public/index.js --develop",
+    "install": "node public/build.js"
+  },
   "dependencies": {
     "body-parser": "^1.13.3",
     "cookie-parser": "^1.4.1",
