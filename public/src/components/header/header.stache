@@ -1,11 +1,13 @@
 <header>
-    <div>
-        <span class="title">Header</span>
+    <div class="inner">
+        <span class="title">{{app.page_title}}</span>
         <span>123</span>
     </div>
+    <div class="clear"></div>
     <can-import from="canjs3-starter-client/components/header/navigation">
         {{#if isResolved}}
             <component-navigation></component-navigation>
         {{/if}}
     </can-import>
+    <div class="clear"></div>
 </header>

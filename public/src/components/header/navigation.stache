@@ -3,7 +3,7 @@
         {{#navigation.data}}
             <li class="{{#isCurrentRoute .}} active {{/isCurrentRoute}}">
                 {{#if url}}
-                    <a class="title" href="{{createUrl url}}" ($click)="selected()">
+                    <a class="title" href="{{createUrl url}}">
                         {{#is icon.type "fa"}}
                             <i class="icon fa fa-{{icon.icon}}" aria-hidden="true"></i>
                         {{/is}}
@@ -24,7 +24,7 @@
                     <ul class="sub-menu">
                         {{#children}}
                             <li class="{{#isCurrentRoute .}} active {{/isCurrentRoute}}">
-                                <a href="{{createUrl url}}" ($click)="selected()">
+                                <a href="{{createUrl url}}">
                                     {{#is icon.type "fa"}}
                                         <i class="icon fa fa-{{icon.icon}}" aria-hidden="true"></i>
                                     {{/is}}

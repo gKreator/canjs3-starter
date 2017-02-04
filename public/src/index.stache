@@ -15,7 +15,7 @@
         <can-import from="canjs3-starter-client/app" export-as="viewModel" />
         <can-import from="canjs3-starter-client/components/header/">
             {{#if isResolved}}
-                <component-header {session}="session"></component-header>
+                <component-header {app}="."></component-header>
             {{/if}}
         </can-import>
         <div class="app-page">

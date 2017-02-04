@@ -43,7 +43,7 @@ table {
 }
 
 /*
- *
+ * main
  */
 body {
     padding: 15px;
@@ -52,4 +52,67 @@ body {
     color: #000;
     background: #fff;
     font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/*
+ * header
+ */
+
+header {
+    background: #ccc;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+header .inner {
+    padding: 10px;
+}
+
+header .navigation-section {
+    border-top: 1px solid #000;
+}
+
+header .navigation-section ul li a {
+    display: block;
+}
+
+header .navigation-section > ul > li {
+    float: left;
+    padding: 5px;
+    position: relative;
+    white-space: nowrap;
+}
+
+header .navigation-section > ul > li.active {
+    background: green;
+}
+
+header .navigation-section > ul > li > ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: #ccc;
+    display: block;
+}
+
+header .navigation-section > ul > li:hover > ul {
+    display: block;
+    min-width: 100%;
+}
+
+header .navigation-section > ul > li > ul > li {
+    padding: 5px;
+    white-space: nowrap;
+    border-bottom: 1px solid #000;
+}
+
+header .navigation-section > ul > li > ul > li.active {
+    background: green;
 }

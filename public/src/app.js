@@ -7,7 +7,6 @@ import "styles/styles.css!";
 import "es6-shim";
 import DefineMap from "can-define/map/";
 import stache from "can-stache";
-import can from "can-namespace";
 import route from 'can-route';
 import "can-route-pushstate";
 import 'can-stache/helpers/route';
@@ -60,6 +59,20 @@ const AppViewModel = DefineMap.extend('App', {
                     title: "Dashboard",
                     componentName: "page-dashboard-index",
                     moduleName: "dashboard/index/",
+                };
+
+            } else if(page === "project-list") {
+                return {
+                    title: "Project List",
+                    componentName: "page-project-list",
+                    moduleName: "project/list/",
+                };
+
+            } else if(page === "project-details") {
+                return {
+                    title: "Project Details",
+                    componentName: "page-project-details",
+                    moduleName: "project/details/",
                 };
 
             } else {
